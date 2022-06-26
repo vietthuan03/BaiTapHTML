@@ -1,0 +1,70 @@
+.row{
+    margin-right: -60px;
+    margin-left: -70px;
+}
+.product-detail .sp-wrap{
+	max-width: 90%;
+}
+/* .small{
+	font-size: 90px;
+	color: #808080;
+} */
+
+/* button mua ngay */
+.btn-end button{
+    font-size: 16px;
+	width: 40%;
+	align-items: center;
+}
+
+/* Sản phẩm tương tự */
+.product-top img{
+    width: 120%;   
+    padding-left: -100px;
+}
+
+.product-bottom .far, .product-bottom .fas{
+    color: #28a745;
+    font-size: 10px;
+}
+.product-bottom h6{
+    padding-left: 20px;
+    font-weight: bold;
+}
+.product-bottom h5{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.overlay{
+    display: block;
+    opacity: 0.1;
+    position: absolute;
+    top: 10%;
+    margin-left: 1px;
+    width: 70px;
+}
+.overlay .btn i{
+    border-radius: 50%;
+}
+.product-top:hover .overlay{
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.2s;
+}
+.overlay .fas, .overlay .far{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin: 5%;
+    margin-bottom: 5%;
+}
+.overlay .btn-secondary{
+    background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+}
+

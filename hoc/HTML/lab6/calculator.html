@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <style>
+        .row {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        function numericonly(x) {
+            if (!x.keyCode >= 48 && x.keyCode <= 57) {
+                return false;
+            }
+        }
+        function changeStyle(x) {
+            x.style.cssText = "background-color: yellow; outline: none; border: 1px solid red;";
+        }
+        function noStyle(x) {
+            x.style.cssText = "background-color: white; outline: none; border: 1px solid black;";
+        }
+        function add() {
+            var a = document.getElementById("txtA").value;
+            var b = document.getElementById("txtB").value;
+            var result = document.getElementById("result");
+            var temp = "";
+            temp = a + "+" + b + "=" + eval(parseInt(a) + parseInt(b))
+            result.innerHTML = temp;
+        }
+        function minus() {
+            var a = document.getElementById("txtA").value;
+            var b = document.getElementById("txtB").value;
+            var result = document.getElementById("result");
+            var temp = "";
+            temp = a + "-" + b + "=" + eval(parseInt(a) - parseInt(b))
+            result.innerHTML = temp;
+        }
+        function multiply() {
+            var a = document.getElementById("txtA").value;
+            var b = document.getElementById("txtB").value;
+            var result = document.getElementById("result");
+            var temp = "";
+            temp = a + "*" + b + "=" + eval(parseInt(a) * parseInt(b))
+            result.innerHTML = temp;
+        }
+        function divide() {
+            var a = document.getElementById("txtA").value;
+            var b = document.getElementById("txtB").value;
+            var result = document.getElementById("result");
+            var temp = "";
+            temp = a + "/" + b + "=" + eval(parseInt(a) / parseInt(b))
+            result.innerHTML = temp;
+        }
+    </script>
+</head>
+
+<body class="d-flex align-items-center" style="height: 100vh">
+    <div class="container">
+        <div class="row">
+            <div class="offset-3 col-6 border border-1 border-dark p-5">
+                <h3 class="text-center text-dark text-decoration-underline">May tinh</h3>
+                <form action="">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="">So a:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input class="w-100" type="text" id="txtA" onkeypress="return numericonly(event)"
+                                        onfocus="changeStyle(this)" onblur="noStyle(this)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="">So b:</label>
+                                </div>
+                                <div class="col-10">
+                                    <input class="w-100" type="number" name="" id="txtB"
+                                        onkeypress="return numericonly(event)" onfocus="changeStyle(this)"
+                                        onblur="noStyle(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row d-flex flex-column">
+                                <div class="col">
+                                    <button type="button" class="btn btn-dark w-100" onclick="add()">+</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-dark w-100" onclick="minus()">-</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-dark w-100" onclick="multiply()">*</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-dark w-100" onclick="divide()">/</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 class="text-dark text-center">Kết quả</h3>
+                        <div class="col m-2 p-3 border border-1" id="result">
+                            ket qua se dc hien thi o day
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+#mua {
+    background-color: rgb(250, 65, 65);
+    color: white;
+  }
+  #mua:hover {
+    color: red;
+    background-color: white;
+  }
+  .hieu_ung{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+  }
+  .hieu_ung:hover{
+    border-color: red;
+  }
+  

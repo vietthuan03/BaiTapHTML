@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var txta = prompt("Enter number A");
+    var txtb = prompt("Enter number B");
+
+    if (txta == "" || txta == null || isNaN(txta)) {
+        alert("Number A is incorrect formatted!");
+    } else if (txtb == "" || txtb == null || isNaN(txtb)) {
+        alert("Number B is incorrect formatted!");
+    } else {
+        var result = parseFloat(txta) + parseFloat(txtb);
+        alert("Result:\n " + txta + " + " + txtb + " = " + result)
+    }
+</script>
+
+</html>
